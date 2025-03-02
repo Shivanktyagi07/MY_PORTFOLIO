@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-2;
+  }
+  
+  .btn-primary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md transition-all duration-300 font-medium flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/30 transform hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-md transition-all duration-300 font-medium hover:shadow-lg hover:shadow-purple-500/30 transform hover:-translate-y-1;
+  }
+  
+  .section-heading {
+    @apply text-4xl font-bold mb-4 relative;
+  }
+  
+  .section-heading::after {
+    @apply content-[''] absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-20 bg-purple-500;
+  }
+}
+
+/* Mouse trail effect */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color:rgba(226, 229, 240, 0.7);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(147, 51, 234, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+}
+
+/* Glow effect for cards */
+.glow-on-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-on-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-on-hover:hover::before {
+  opacity: 1;
+}
