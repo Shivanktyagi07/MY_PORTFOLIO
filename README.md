@@ -2,9 +2,8 @@
 
 This is a dynamic portfolio website built using **Vite**, **React**, and **Tailwind CSS**. It features a modern, responsive design with React Routing for seamless navigation and an inquiry form for visitors to contact me.
 
-Live Webiste: ```sh 
-            https://portfolio-code-five.vercel.app/
-               ```
+Live Webiste:  https://portfolio-code-five.vercel.app/
+            
 ## Features
 
 - ⚡ **Fast Development**: Powered by Vite for a lightning-fast development experience.
