@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Code } from "lucide-react";
 
@@ -30,7 +30,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
-    { name: "Experience", path: "/experience" },
+    // { name: "Experience", path: "/experience" },
     { name: "Certificates", path: "/certificates" },
     { name: "Contact", path: "/contact" },
   ];

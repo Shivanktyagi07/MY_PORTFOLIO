@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import pic from "../assets/pic.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -124,7 +125,7 @@ const Home = () => {
         <div className="order-1 lg:order-2 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl shadow-purple-900/30 transition-all duration-500 hover:shadow-white hover:scale-105">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQHyBbr7yq-9SQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696436984201?e=1747872000&v=beta&t=6liOIubRSQj2pc1bDDWO12bHZLTcQQm-YCZsUZFB_tw"
+              src={pic}
               alt="Shivank Tyagi"
               className="w-full h-full object-cover"
             />
